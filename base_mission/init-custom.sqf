@@ -9,7 +9,7 @@ execNow "support\modules\R3F_logistics\init.sqf";
 execNow "support\modules\tup_logistics\main.sqf";
 [] execVM "scripts\pxs_satcom_a3\init_satellite.sqf";
 
-if ((parmasarray select 47) == 1) then {[250,600,1,2,6,[0,1,1],player,[0.2,0.3,0.1,0.55,0.25,1,1,0.25,1,1],0,700,nil,["AWARE","SAD"],false] execVM "LV\ambientCombat.sqf";};
+if ((paramsarray select 47) == 1) then {[250,600,1,2,6,[0,1,1],player,[0.2,0.3,0.1,0.55,0.25,1,1,0.25,1,1],0,700,nil,["AWARE","SAD"],false] execVM "LV\ambientCombat.sqf";};
 
 CODEINPUT = [];
 CODE = [(round(random 9)), (round(random 9)), (round(random 9)), (round(random 9)), (round(random 9)), (round(random 9))];
