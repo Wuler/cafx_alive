@@ -1,0 +1,322 @@
+class Params {
+	class ins_settings { //0
+		title = ":: Insurgency Settings";
+		values[]={0,1};
+		texts[]={ "Disabled","Enabled"};
+		default = 0;			
+	};
+    class cachesLimit { //1
+		title = "	Number of caches to hunt";
+		values[] = {2,4,6,8,10,12,14,16};
+		texts[] = {"Two","Four","Six","Eight","Ten","Twelve","Fourteen","Sixteen"};
+		default = 16;
+	};
+	class intelItems { //2
+		title = "	Number of Intel Items to spawn per town";
+		values[] = {1,2,3,4,5,6,7,8};
+		texts[] = {"1 - Extreme","2 - Very Hard","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy"};
+		default = 5;
+	};
+	class 7VAS_restrict { //3
+		title = "	Restricted VAS?";
+		values[]={0,1};
+		texts[]={"No","Yes"};
+		default=1;
+	};
+	class EmptyLine2 { //4
+		title = ":: ALiVE";
+		values[]={0,0};
+		texts[]={"",""};
+		default = 0;
+	};
+	class civ_settings { //5
+		title = "	:: Civilian Settings";
+		values[]={0,1};
+		texts[]={"Disabled","Enabled"};
+		default = 1;
+	};
+	class civ_sizefilter { //6
+		title = "			Objectives size";
+		values[] = {160,250,400,700};
+		texts[] = {"All","Small","Medium","Large"};
+		default = 160;
+	};
+	class civ_priorityfilter { //7
+		title = "			Objectives priority";
+		values[] = {0,10,30,40};
+		texts[] = {"None","Low","Medium","High"};
+		default = 0;
+	};
+	class civ_faction { //8
+		title = "			Faction";
+		values[] = {1,2};
+		texts[] = {"Middle Eastern","Greek"};
+		default = 1;
+	};
+	class civ_multiplier { //9
+		title = "			Amount";
+		values[] = {1,2,3,4};
+		texts[] = {"Low","Medium","High","Extreme"};
+		default = 1;
+	};
+	class civ_ambveh { //10
+		title = "			Ambient vehicles";
+		values[] = {1,2,3,4};
+		texts[] = {"None","Low","Medium","High"};
+		default = 1;
+	};
+	class civ_ambvehfaction { //11
+		title = "			Vehicles faction";
+		values[] = {0,1};
+		texts[] = {"","Greek"};
+		default = 1;
+	};
+	class civ_distance { //12
+		title = "			Spawn distance";
+		values[] = {200,300,400,500,600,700,800,900,1000};
+		texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 400;
+	};
+	class civ_distanceheli { //13
+		title = "			Spawn distance heli";
+		values[] = {0,100,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"None","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 0;
+	};
+	class civ_distancejet { //14
+		title = "			Spawn distance jets";
+		values[] = {0,100,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"None","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 0;
+	};
+	class civ_limit { //15
+		title = "			Limit";
+		values[] = {5,10,15,20,25,30,40,50};
+		texts[] = {"5","10","15","20","25","30","40","50"};
+		default = 15;
+	};
+	class cqb_enable { //16
+		title = "	:: CQB Settings";
+		values[]={0,1};
+		texts[]={"Disabled","Enabled"};
+		default = 1;
+	};
+	class cqb_locality { //17
+		title = "			Locality";
+		values[] = {1,2,3};
+		texts[] = {"Server","Players","Headless"};
+		default = 3;
+	};
+	class cqb_location { //18
+		title = "			Locations";
+		values[] = {0,1};
+		texts[] = {"All","Towns"};
+		default = 0;
+	};
+	class cqb_chance { //19
+		title = "			Chance";
+		values[] = {1,2,3,4,5,6,7,8,9,10,15,20,30,40,50};
+		texts[] = {"1%","2%","3%","4%","5%","6%","7%","8%","9%","10%","15%","20%","30%","40%","50%"};
+		default = 5;
+	};
+	class cqb_density { //20
+		title = "			Density";
+		values[] = {99999,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"Off","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 300;
+	};
+	class cqb_dominant { //21
+		title = "			Dominant faction";
+		values[] = {0,1};
+		texts[] = {"No","Yes"};
+		default = 0;
+	};
+	class cqb_distance { //22
+		title = "			Spawn distance";
+		values[] = {200,300,400,500,600,700,800,900,1000};
+		texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 400;
+	};
+	class cqb_distanceheli { //23
+		title = "			Spawn distance heli";
+		values[] = {0,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 0;
+	};
+	class cqb_distancejet { //24
+		title = "			Spawn distance jets";
+		values[] = {0,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 0;
+	};
+	class cqb_factionreg { //25
+		title = "			Regular faction";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
+		default = 0;
+	};
+	class cqb_factionstrat { //26
+		title = "			Strategic faction";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
+		default = 1;
+	};
+	class cp_enable { //27
+		title = "	:: Military urban Settings";
+		values[]={0,1};
+		texts[]={"Disabled","Enabled"};
+		default = 1;
+	};
+	class cp_clustertype { //28
+		title = "			Objectives type";
+		values[]={0,1,2,3,4,5,6,7};
+		texts[]={"All","HQ","Power","Comms","Fuel","Marine","Construction","Settlement"};
+		default =0;
+	};
+	class cp_sizefilter { //29
+		title = "			Objectives size";
+		values[] = {160,250,400,700};
+		texts[] = {"All","Small","Medium","Large"};
+		default = 250;
+	};
+	class cp_priorityfilter { //30
+		title = "			Objectives priority";
+		values[] = {0,10,30,40};
+		texts[] = {"All","Low","Medium","High"};
+		default = 0;
+	};
+	class cp_size { //31
+		title = "			Size";
+		values[]={30,60,100,200,400,600,800};
+		texts[]={"30","60","100","200","400","600","800"};
+		default = 400;
+	};
+	class cp_type { //32
+		title = "			Type";
+		values[]={0,1,2,3,4,5,6};
+		texts[]={"Random","Armored","Mechanized","Motorized","Infantry","Air","Specops"};
+		default = 3;
+	};
+	class cp_faction { //33
+		title = "			Faction";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
+		default = 0;
+	};
+	class mp_enable { //34
+		title = "	:: Military strategic Settings";
+		values[]={0,1};
+		texts[]={"Disabled","Enabled"};
+		default = 1;
+	};
+	class mp_sizefilter { //35
+		title = "			Objectives size";
+		values[] = {0,100,200,300};
+		texts[] = {"All","Small","Medium","Large"};
+		default = 0;
+	};
+	class mp_priorityfilter { //36
+		title = "			Objectives priority";
+		values[] = {0,10,30,40};
+		texts[] = {"All","Low","Medium","High"};
+		default = 0;
+	};
+	class mp_size { //37
+		title = "			Size";
+		values[]={30,60,100,200,400,600,800};
+		texts[]={"30","60","100","200","400","600","800"};
+		default = 400;
+	};
+	class mp_type { //38
+		title = "			Type";
+		values[]={0,1,2,3,4,5,6};
+		texts[]={"Random","Armored","Mechanized","Motorized","Infantry","Air","Specops"};
+		default = 3;
+	};
+	class mp_faction { //39
+		title = "			Faction";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
+		default = 1;
+	};
+	class mp_ambveh { //40
+		title = "			Ambient Vehicles";
+		values[] = {0,1,2,3};
+		texts[] = {"None","Low","Medium","High"};
+		default = 0;
+	};
+	class profiler_enable { //41
+		title = "	:: Military Profiler Settings";
+		values[]={0,0};
+		texts[]={"",""};
+		default = 0;
+	};
+	class profiler_distance { //42
+		title = "			Spawn distance";
+		values[] = {200,300,400,500,600,700,800,900,1000};
+		texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 500;
+	};
+	class profiler_distanceheli { //43
+		title = "			Spawn distance heli";
+		values[] = {0,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 0;
+	};
+	class profiler_distancejet { //44
+		title = "			Spawn distance jets";
+		values[] = {0,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = 0;
+	};
+	class profiler_limit { //45
+		title = "			Limit";
+		values[] = {20,30,40,50,60,80,100};
+		texts[] = {"20","30","40","50","60","80","100"};
+		default = 40;
+	};
+	class profiler_persist { //46
+		title = "			Persistence";
+		values[] = {0,1};
+		texts[] = {"Off","On"};
+		default = 0;
+	};
+	class ambient_combat { //47
+		title = "			Ambient Combat";
+		values[] = {0,1};
+		texts[] = {"Off","On"};
+		default = 0;
+	};
+	class end { //48
+		title = "";
+		values[] = {0,0};
+		texts[] = {"",""};
+		default = 0;
+	};
+};
+
+#include "scripts\common.hpp"
+#include "scripts\c_ui.hpp"
+
+class CfgSounds {
+ sounds[] = {};
+	#include "dialogs\keypad_defuse\cfgsounds.hpp"
+};
+
+
+class CfgFunctions {
+	#include "support\modules\tup_logistics\functions.hpp"
+    #include "EPD\EPDcfgFunctions.hpp"
+};
+
+#include "dialogs\keypad_defuse\explosivePad.hpp"
+#include "support\modules\DOM_squad\SquadManagement.hpp"
+#include "support\modules\R3F_logistics\desc_include.h"
+#include "support\modules\tup_logistics\dialog.hpp"
+#include "scripts\pxs_satcom_a3\init_interface.hpp"
+
+class Extended_Init_Eventhandlers {
+	class CH_147F {
+        CH_147_init = "_this execvm ""scripts\usableCargoRamp.sqf"";";
+    };
+};
