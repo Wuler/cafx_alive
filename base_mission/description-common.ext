@@ -1,11 +1,21 @@
+class CfgUnitInsignia
+{
+	class CMBG
+	{
+		displayName = "7th Canadian Mechanized Brigade Group";
+		author = "7CMBG"; // Author displayed in Arsenal
+		texture = "pics\logo.paa"; // Image path
+		textureVehicle = ""; // Does nothing currently, reserved for future use
+	};
+};
 class Params {
 	class ins_settings { //0
 		title = ":: Insurgency Settings";
 		values[]={0,1};
 		texts[]={ "Disabled","Enabled"};
-		default = 0;			
+		default = 0;
 	};
-    class cachesLimit { //1
+    	class cachesLimit { //1
 		title = "	Number of caches to hunt";
 		values[] = {2,4,6,8,10,12,14,16};
 		texts[] = {"Two","Four","Six","Eight","Ten","Twelve","Fourteen","Sixteen"};
@@ -19,8 +29,8 @@ class Params {
 	};
 	class 7VAS_restrict { //3
 		title = "	Restricted VAS?";
-		values[]={0,1};
-		texts[]={"No","Yes"};
+		values[]={0,1,2};
+		texts[]={"No","Yes, at spawn","Yes, MCC only"};
 		default=1;
 	};
 	class EmptyLine2 { //4
@@ -33,7 +43,7 @@ class Params {
 		title = "	:: Civilian Settings";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class civ_sizefilter { //6
 		title = "			Objectives size";
@@ -51,7 +61,7 @@ class Params {
 		title = "			Faction";
 		values[] = {1,2};
 		texts[] = {"Middle Eastern","Greek"};
-		default = 1;
+		default = 2;
 	};
 	class civ_multiplier { //9
 		title = "			Amount";
@@ -73,20 +83,20 @@ class Params {
 	};
 	class civ_distance { //12
 		title = "			Spawn distance";
-		values[] = {200,300,400,500,600,700,800,900,1000};
-		texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		values[] = {0,100,200,300,400,500,600,700,800,900,1000,1200,1500,2000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km","1.2km","1.5km","2km"};
 		default = 400;
 	};
 	class civ_distanceheli { //13
 		title = "			Spawn distance heli";
-		values[] = {0,100,200,300,400,500,600,700,800,900,1000};
-		texts[] = {"None","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		values[] = {0,100,200,300,400,500,600,700,800,900,1000,1200,1500,2000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km","1.2km","1.5km","2km"};
 		default = 0;
 	};
 	class civ_distancejet { //14
 		title = "			Spawn distance jets";
-		values[] = {0,100,200,300,400,500,600,700,800,900,1000};
-		texts[] = {"None","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		values[] = {0,100,200,300,400,500,600,700,800,900,1000,1200,1500,2000};
+		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km","1.2km","1.5km","2km"};
 		default = 0;
 	};
 	class civ_limit { //15
@@ -99,7 +109,7 @@ class Params {
 		title = "	:: CQB Settings";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class cqb_locality { //17
 		title = "			Locality";
@@ -129,7 +139,7 @@ class Params {
 		title = "			Dominant faction";
 		values[] = {0,1};
 		texts[] = {"No","Yes"};
-		default = 0;
+		default = 1;
 	};
 	class cqb_distance { //22
 		title = "			Spawn distance";
@@ -151,21 +161,21 @@ class Params {
 	};
 	class cqb_factionreg { //25
 		title = "			Regular faction";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
+		values[] = {0,1,2,3,4,5,6};
+		texts[] = {"OPFIA","Pirates","Tribals","Rebels","Russian Motor Rifle troops","Russian Tank Troops","None"};
 		default = 0;
 	};
 	class cqb_factionstrat { //26
 		title = "			Strategic faction";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
+		values[] = {0,1,2,3,4,5,6};
+		texts[] = {"OPFIA","Pirates","Tribals","Rebels","Russian Motor Rifle troops","Russian Tank Troops","None"};
 		default = 1;
 	};
 	class cp_enable { //27
 		title = "	:: Military urban Settings";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class cp_clustertype { //28
 		title = "			Objectives type";
@@ -177,7 +187,7 @@ class Params {
 		title = "			Objectives size";
 		values[] = {160,250,400,700};
 		texts[] = {"All","Small","Medium","Large"};
-		default = 250;
+		default = 160;
 	};
 	class cp_priorityfilter { //30
 		title = "			Objectives priority";
@@ -189,7 +199,7 @@ class Params {
 		title = "			Size";
 		values[]={30,60,100,200,400,600,800};
 		texts[]={"30","60","100","200","400","600","800"};
-		default = 400;
+		default = 200;
 	};
 	class cp_type { //32
 		title = "			Type";
@@ -199,15 +209,15 @@ class Params {
 	};
 	class cp_faction { //33
 		title = "			Faction";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
-		default = 0;
+		values[] = {0,1,2,3,4,5};
+		texts[] = {"OPFIA","Pirates","Tribals","Rebels","Russian Motor Rifle troops","Russian Tank Troops"};
+		default = 4;
 	};
 	class mp_enable { //34
 		title = "	:: Military strategic Settings";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class mp_sizefilter { //35
 		title = "			Objectives size";
@@ -225,19 +235,19 @@ class Params {
 		title = "			Size";
 		values[]={30,60,100,200,400,600,800};
 		texts[]={"30","60","100","200","400","600","800"};
-		default = 400;
+		default = 200;
 	};
 	class mp_type { //38
 		title = "			Type";
 		values[]={0,1,2,3,4,5,6};
 		texts[]={"Random","Armored","Mechanized","Motorized","Infantry","Air","Specops"};
-		default = 3;
+		default = 1;
 	};
 	class mp_faction { //39
 		title = "			Faction";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-		texts[] = {"Tribals (OPFOR)","Pirates","Taki Army","Taki Militia","GME","Syrian Arab Army","Hezbollah","Quds Force","Irregulars (NEUTRAL)","UN","Russia","SZA","SZP"};
-		default = 1;
+		values[] = {0,1,2,3,4,5};
+		texts[] = {"OPFIA","Pirates","Tribals","Rebels","Russian Motor Rifle troops","Russian Tank Troops"};
+		default = 5;
 	};
 	class mp_ambveh { //40
 		title = "			Ambient Vehicles";
@@ -245,7 +255,7 @@ class Params {
 		texts[] = {"None","Low","Medium","High"};
 		default = 0;
 	};
-	class profiler_enable { //41
+	class profiler { //41
 		title = "	:: Military Profiler Settings";
 		values[]={0,0};
 		texts[]={"",""};
@@ -253,27 +263,27 @@ class Params {
 	};
 	class profiler_distance { //42
 		title = "			Spawn distance";
-		values[] = {200,300,400,500,600,700,800,900,1000};
-		texts[] = {"200m","300m","400m","500m","600m","700m","800m","900m","1km"};
-		default = 500;
+		values[] = {0,500,600,700,800,900,1000,1200,1500,2000};
+		texts[] = {"None","500m","600m","700m","800m","900m","1km","1.2km","1.5km","2km"};
+		default = 1000;
 	};
 	class profiler_distanceheli { //43
 		title = "			Spawn distance heli";
-		values[] = {0,200,300,400,500,600,700,800,900,1000};
-		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		values[] = {0,500,600,700,800,900,1000,1200,1500,2000};
+		texts[] = {"None","500m","600m","700m","800m","900m","1km","1.2km","1.5km","2km"};
 		default = 0;
 	};
 	class profiler_distancejet { //44
 		title = "			Spawn distance jets";
-		values[] = {0,200,300,400,500,600,700,800,900,1000};
-		texts[] = {"None","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		values[] = {0,500,600,700,800,900,1000,1200,1500,2000};
+		texts[] = {"None","500m","600m","700m","800m","900m","1km","1.2km","1.5km","2km"};
 		default = 0;
 	};
 	class profiler_limit { //45
 		title = "			Limit";
-		values[] = {20,30,40,50,60,80,100};
-		texts[] = {"20","30","40","50","60","80","100"};
-		default = 40;
+		values[] = {10,15,20,30,40,50,60,80,100};
+		texts[] = {"10","15","20","30","40","50","60","80","100"};
+		default = 20;
 	};
 	class profiler_persist { //46
 		title = "			Persistence";
@@ -281,13 +291,19 @@ class Params {
 		texts[] = {"Off","On"};
 		default = 0;
 	};
-	class ambient_combat { //47
-		title = "			Ambient Combat";
+	class ambience { //47
+		title = "	:: Ambience";
+		values[] = {0,1,2,3,4,5};
+		texts[] = {"Off","1 car","2 cars","3 cars","4 cars","5 cars"};
+		default = 1;
+	};
+	class amb_debug { //48
+		title = "			Debug";
 		values[] = {0,1};
 		texts[] = {"Off","On"};
 		default = 0;
 	};
-	class end { //48
+	class end { //50
 		title = "";
 		values[] = {0,0};
 		texts[] = {"",""};
@@ -295,28 +311,61 @@ class Params {
 	};
 };
 
-#include "scripts\common.hpp"
-#include "scripts\c_ui.hpp"
-
-class CfgSounds {
- sounds[] = {};
-	#include "dialogs\keypad_defuse\cfgsounds.hpp"
-};
-
-
-class CfgFunctions {
-	#include "support\modules\tup_logistics\functions.hpp"
-    #include "EPD\EPDcfgFunctions.hpp"
-};
-
-#include "dialogs\keypad_defuse\explosivePad.hpp"
-#include "support\modules\DOM_squad\SquadManagement.hpp"
-#include "support\modules\R3F_logistics\desc_include.h"
-#include "support\modules\tup_logistics\dialog.hpp"
 #include "scripts\pxs_satcom_a3\init_interface.hpp"
 
 class Extended_Init_Eventhandlers {
-	class CH_147F {
-        CH_147_init = "_this execvm ""scripts\usableCargoRamp.sqf"";";
+	class CAManBase {
+		bandage_init = "(_this select 0) addMagazine ""cse_bandage_basic"";";
+    };
+	class B_ons_medic_TW_F {
+		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
+    };
+	class B_ons_medic_AR_F {
+		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
+    };
+	class ONS_CSOG_MEDIC {
+		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
+    };
+	class ONS_CSOG_OPERATOR_V2 {
+		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
+    };
+	class MASH_EP1 {
+		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
+    };
+	class MASH {
+		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
+    };
+	class USMC_WarfareBFieldhHospital {
+		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
+    };
+	class US_WarfareBFieldhHospital_EP1 {
+		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
+    };
+	class B_Truck_01_medical_F {
+		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
+    };
+	class rhsusf_m113_usarmy {
+		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
+    };
+	class rhsusf_m113d_usarmy {
+		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
+    };
+	class B_MRAP_01_F {
+		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
+    };
+	class cafx_lav3_isc_base_F {
+		lav3_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
+    };
+	class CAF_CH146_F {
+		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
+    };
+    class B_Heli_Transport_01_F {
+   		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
+    };
+	class B_Heli_Transport_03_F {
+		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
+	};
+	class B_Heli_Transport_03_unarmed_F {
+		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
     };
 };

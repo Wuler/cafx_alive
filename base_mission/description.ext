@@ -6,19 +6,22 @@ class header {
 	playerCountMultipleOf = 1;  //Coop type missions use 1, Team type missions use 2
 };
 
-author = Lt J.Deschamps;
+author = "7CMBG";
 onLoadIntroTime = true;
 onLoadMissionTime = true;
-onLoadName = CAFX ALiVE;
-OnLoadMission = "CAFX coop framework";
-loadScreen = "load.jpg";
+onLoadName = "ONS/MCC/ALiVE Template";
+OnLoadMission = "coop framework";
+loadScreen = "pics\load.jpg";
 
 aiKills = 0;
 briefing = 1;
 debriefing = 1;
 respawn = "BASE";
-respawnDelay = 3;
+respawnDelay = 5;
 RespawnDialog = 0;
+respawnTemplates[] = {"Spectator","counter","wave"};
+respawnOnStart = 0;
+respawnButton = 0;
 disabledAI = 1;
 enableDebugConsole = 1;
 allowFunctionsRecompile = 1;
@@ -29,5 +32,7 @@ showCompass=1;
 showWatch=1;
 showMap=1;
 showNotePad=1;
+showHUD=1;
 
 #include "description-common.ext"
+//#include "CfgORBAT.hpp"

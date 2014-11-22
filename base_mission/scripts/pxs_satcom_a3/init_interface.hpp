@@ -24,7 +24,7 @@ class RscInfoBack
 	SizeEx = 0.025;
 	text = "";
 };
-/*
+
 class RscText
 {
 	access = 0;
@@ -43,7 +43,7 @@ class RscText
 	font = "puristaMedium";
 	SizeEx = 0.035;
 };
-*/
+
 // main dialog
 class PXS_RscSatellite
 {

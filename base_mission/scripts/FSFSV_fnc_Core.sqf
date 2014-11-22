@@ -24,7 +24,7 @@ FSFSV_CallBackpackToFront = {
 		player action ["DropBag",_FSFSV_SacADosGwh,_backpack];
 		player forceWalk true;
 		sleep 2;
-		
+
 		if ((backpack player == "") && !(isNull _FSFSV_SacADosGwh)) then {//anti Action::Process - No target [action: DropBag]
 			private ["_positionMemorisee","_positionActualisee","_vehicle"];
 			_FSFSV_SacADosGwh attachTo [player,[-0.1,0.8,-0.05],"pelvis"];
@@ -62,7 +62,7 @@ FSFSV_CallBackpackToFront = {
 						_FSFSV_SacADosGwh attachTo [_vehicle,[-0.12,0.65,-0.15]];
 						_FSFSV_SacADosGwh setVectorDirAndUp [[0,-0.2,-1],[0,1,0]];
 						//anti-bug Lino, addAction temporarily removed
-						player setVariable ["FSFSV_BACKPACK",objNull];
+						player setVariable ["FSFSV_BACKPACK",objnull];
 					} else {
 						detach _FSFSV_SacADosGwh;
 						_FSFSV_SacADosGwh setPos [random 50,random 50,(10000 + (random 50))];
@@ -93,7 +93,7 @@ FSFSV_CallBackpackToFront = {
 					};
 					if !(isNull (attachedTo _FSFSV_SacADosGwh)) then {detach _FSFSV_SacADosGwh;};
 					_FSFSV_SacADosGwh setPos (getPos player);
-					player setVariable ["FSFSV_BACKPACK",objNull];
+					player setVariable ["FSFSV_BACKPACK",objnull];
 				};
 				sleep 0.1;
 			};
@@ -109,19 +109,19 @@ FSFSV_CallBackpackToBack = {
 	_FSFSV_SacADosGwh = player getVariable "FSFSV_BACKPACK";
 	detach _FSFSV_SacADosGwh;
 	player action ["AddBag",_FSFSV_SacADosGwh,(backpackCargo _FSFSV_SacADosGwh) select 0];
-	player setVariable ["FSFSV_BACKPACK",objNull];
+	player setVariable ["FSFSV_BACKPACK",objnull];
 	player forceWalk false;
 };
 
 //Check si joueur a pied et si l'on peut placer le sac a dos en position ventral
 FSFSV_TestPlayerBackpackBack = {
 	private "_return";
-	_return = false;
-	if ((isNull (player getVariable "FSFSV_BACKPACK")) && (backpack player != "") && (vehicle player == player)) then {
+	_return = 0;
+	if (isnull(player getVariable ["FSFSV_BACKPACK",objnull]) && (backpack player != "") && (vehicle player == player)) then {
 		private ["_pos","_iswater"];
 		_pos = getPosASL player;
 		_iswater = surfaceIsWater _pos;
-		if (!(_iswater) || (_iswater && ((_pos select 2) > 0.5))) then {_return = true;};
+		if (!(_iswater) || (_iswater && ((_pos select 2) > 0.5))) then {_return = 1;};
 	};
 	_return
 };
@@ -129,10 +129,9 @@ FSFSV_TestPlayerBackpackBack = {
 //Check si joueur a pied et si il y a un sac en position ventral et aucun en position dos
 FSFSV_TestPlayerBackpackFront = {
 	private "_return";
-	_return = if (!(isNull (player getVariable "FSFSV_BACKPACK")) && (backpack player == "") && (vehicle player == player)) then {
-		true;
-	} else {
-		false;
+	_return = 0;
+	if (!isnull(player getVariable ["FSFSV_BACKPACK",objnull]) && (backpack player == "") && (vehicle player == player)) then {
+		_return = 1;
 	};
 	_return
 };
@@ -174,7 +173,7 @@ FSFSV_QuellePosition = {
 	     case "advepercmwlksnonwrfldb";
 	     case "asdvpercmwlksnonwrfldb" : {"horizontalupper";};
 
-	     // vide par défaut
+	     // vide par d?faut
 	     default {"";};
     };
 	_animationAMemoriser

@@ -1,4 +1,4 @@
-﻿private["_mouseWheelTurns","_return","_z"];
+private["_mouseWheelTurns","_return","_z"];
 
 // ------------------ Parse Arguments -----------------
 
