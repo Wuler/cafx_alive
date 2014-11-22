@@ -316,56 +316,56 @@ class Params {
 class Extended_Init_Eventhandlers {
 	class CAManBase {
 		bandage_init = "(_this select 0) addMagazine ""cse_bandage_basic"";";
-    };
+    	};
 	class B_ons_medic_TW_F {
 		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
-    };
+	};
 	class B_ons_medic_AR_F {
 		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
-    };
+    	};
 	class ONS_CSOG_MEDIC {
 		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
-    };
+    	};
 	class ONS_CSOG_OPERATOR_V2 {
 		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
-    };
+    	};
 	class MASH_EP1 {
 		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    };
+    	};
 	class MASH {
 		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    };
+    	};
 	class USMC_WarfareBFieldhHospital {
 		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    };
+    	};
 	class US_WarfareBFieldhHospital_EP1 {
 		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    };
+    	};
 	class B_Truck_01_medical_F {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
-    };
+    	};
 	class rhsusf_m113_usarmy {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
-    };
+    	};
 	class rhsusf_m113d_usarmy {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
-    };
+    	};
 	class B_MRAP_01_F {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
-    };
+    	};
 	class cafx_lav3_isc_base_F {
 		lav3_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
-    };
+    	};
 	class CAF_CH146_F {
 		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
-    };
-    class B_Heli_Transport_01_F {
+    	};
+    	class B_Heli_Transport_01_F {
    		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
-    };
+    	};
 	class B_Heli_Transport_03_F {
 		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
 	};
 	class B_Heli_Transport_03_unarmed_F {
 		griffon_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
-    };
+    	};
 };
