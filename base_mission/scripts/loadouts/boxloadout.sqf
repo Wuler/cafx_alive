@@ -1,6 +1,6 @@
 #include "geardefinitions.hpp"
 
-// Loadouts
+// drop all gear
 removeAllItems player;
 removeAllWeapons player;
 removeAllContainers player;
@@ -10,6 +10,7 @@ removeHeadgear player;
 removeAllAssignedItems player;
 removeGoggles player;
 
+// select loadout
 switch toupper(_this select 3) do {
 	case "RFM": {
 		player adduniform _uniform_ar;
@@ -175,9 +176,9 @@ switch toupper(_this select 3) do {
 		player addmagazine _carbine_mag_tr;
 		player addmagazine _smoke;
 
-        player addBackpack _bp_large;
+        	player addBackpack _bp_large;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 		(unitBackpack player) addMagazineCargoGlobal [_mat_heat, 2];
 		(unitBackpack player) addMagazineCargoGlobal [_mat_hedp, 2];
 	};
@@ -195,9 +196,9 @@ switch toupper(_this select 3) do {
 		player addmagazine _carbine_mag_tr;
 		player addmagazine _smoke;
 
-        player addBackpack _bp_large_tw;
+        	player addBackpack _bp_large_tw;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 		(unitBackpack player) addMagazineCargoGlobal [_mat_heat, 2];
 		(unitBackpack player) addMagazineCargoGlobal [_mat_hedp, 2];
 	};
@@ -214,9 +215,9 @@ switch toupper(_this select 3) do {
 		player addmagazine _rifle_mag_tr;
 		player addmagazine _smoke;
 
-        player addBackpack _bp_large;
+        	player addBackpack _bp_large;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 		(unitBackpack player) addMagazineCargoGlobal [_mat_heat, 2];
 		(unitBackpack player) addMagazineCargoGlobal [_mat_hedp, 2];
 	};
@@ -233,9 +234,9 @@ switch toupper(_this select 3) do {
 		player addmagazine _rifle_mag_tr;
 		player addmagazine _smoke;
 
-        player addBackpack _bp_large_tw;
+        	player addBackpack _bp_large_tw;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 		(unitBackpack player) addMagazineCargoGlobal [_mat_heat, 2];
 		(unitBackpack player) addMagazineCargoGlobal [_mat_hedp, 2];
 	};
@@ -253,9 +254,9 @@ switch toupper(_this select 3) do {
 		{player addmagazine _smoke} foreach [1,2];
 		{player addmagazine _smoke_green} foreach [1,2];
 
-        player addBackpack _bp;
+        	player addBackpack _bp;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 		//(unitBackpack player) addItemCargoGlobal ["AGM_Clacker", 1];
 		//(unitBackpack player) addItemCargoGlobal ["AGM_DefusalKit", 1];
 		(unitBackpack player) addItemCargoGlobal [_mine_det, 1];
@@ -275,9 +276,9 @@ switch toupper(_this select 3) do {
 		{player addmagazine _smoke} foreach [1,2];
 		{player addmagazine _smoke_green} foreach [1,2];
 
-        player addBackpack _bp__tw;
+        	player addBackpack _bp__tw;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 		//(unitBackpack player) addItemCargoGlobal ["AGM_Clacker", 1];
 		//(unitBackpack player) addItemCargoGlobal ["AGM_DefusalKit", 1];
 		(unitBackpack player) addItemCargoGlobal [_mine_det, 1];
@@ -309,10 +310,10 @@ switch toupper(_this select 3) do {
 		player addmagazine _smoke_green;
 		player addmagazine _smoke_red;
 
-        player addBackpack _bp;
+        	player addBackpack _bp;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
-        (unitBackpack player) addMagazineCargoGlobal [_smoke, 3];
+        	clearItemCargoGlobal (unitBackpack player);
+        	(unitBackpack player) addMagazineCargoGlobal [_smoke, 3];
 		(unitBackpack player) addMagazineCargoGlobal [_bandage, 14];
 		(unitBackpack player) addMagazineCargoGlobal [_tourniquet, 5];
 		(unitBackpack player) addMagazineCargoGlobal [_morphine, 10];
@@ -355,10 +356,10 @@ switch toupper(_this select 3) do {
 		player addmagazine _smoke_green;
 		player addmagazine _smoke_red;
 
-        player addBackpack _bp_tw;
+        	player addBackpack _bp_tw;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
-        (unitBackpack player) addMagazineCargoGlobal [_smoke, 3];
+        	clearItemCargoGlobal (unitBackpack player);
+        	(unitBackpack player) addMagazineCargoGlobal [_smoke, 3];
 		(unitBackpack player) addMagazineCargoGlobal [_bandage, 14];
 		(unitBackpack player) addMagazineCargoGlobal [_tourniquet, 5];
 		(unitBackpack player) addMagazineCargoGlobal [_morphine, 10];
@@ -385,7 +386,7 @@ switch toupper(_this select 3) do {
 
 		player addBackpack _bp_radio;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 
 		{player addmagazine _rifle_mag} foreach [1,2,3,4,5,6];
 		player addmagazine _rifle_mag_tr;
@@ -410,7 +411,7 @@ switch toupper(_this select 3) do {
 
 		player addBackpack _bp_radio;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 
 		{player addmagazine _rifle_mag} foreach [1,2,3,4,5,6];
 		player addmagazine _rifle_mag_tr;
@@ -476,7 +477,7 @@ switch toupper(_this select 3) do {
 
 		player addBackpack _bp_radio;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 	};
 	case "OFF_TW": {
 		player adduniform _uniform_tw;
@@ -496,7 +497,7 @@ switch toupper(_this select 3) do {
 
 		player addBackpack _bp_radio;
 		clearMagazineCargoGlobal (unitBackpack player);
-        clearItemCargoGlobal (unitBackpack player);
+        	clearItemCargoGlobal (unitBackpack player);
 	};
 	case "RECCE": {
 		player adduniform _uniform_sf;
@@ -537,7 +538,7 @@ switch toupper(_this select 3) do {
 		player addmagazine _smoke_red;
 	};
 	case "CREW": {
-	    player adduniform _uniform_ar;
+	    	player adduniform _uniform_ar;
 		player addheadgear _helmet_ar;
 		player addvest _vest_ar;
 		Player addgoggles _goggles_lowpro;
@@ -551,7 +552,7 @@ switch toupper(_this select 3) do {
 		player addmagazine _smoke_green;
 	};
 	case "CREW_TW": {
-	    player adduniform _uniform_tw;
+	    	player adduniform _uniform_tw;
 		player addheadgear _helmet_tw;
 		player addvest _vest_tw;
 		Player addgoggles _goggles_lowpro;
@@ -565,7 +566,7 @@ switch toupper(_this select 3) do {
 		player addmagazine _smoke_green;
 	};
 	case "PILOT_HELO": {
-	    player adduniform _uniform_pilot;
+	    	player adduniform _uniform_pilot;
 		player addheadgear _helmet_pilot_helo;
 		player addvest _vest_pilot;
 		Player addgoggles _glasses_aviator;
@@ -579,7 +580,7 @@ switch toupper(_this select 3) do {
 		player addmagazine _smoke_green;
 	};
 	case "CREW_HELO": {
-	    player adduniform _uniform_ar;
+	    	player adduniform _uniform_ar;
 		player addheadgear _helmet_crew_helo;
 		player addvest _vest_ar;
 		Player addgoggles _glasses_aviator;
@@ -594,6 +595,7 @@ switch toupper(_this select 3) do {
 	};
 };
 
+//accessories
 removeAllPrimaryWeaponItems player;
 player addPrimaryWeaponItem _elcan;
 player addPrimaryWeaponItem _irlaser;
@@ -601,6 +603,7 @@ player addPrimaryWeaponItem _irlaser;
 player selectweapon primaryweapon player;
 reload player;
 
+//default items
 player linkitem "tf_anprc152";
 {player addMagazine _bandage} foreach [1,2,3];
 player addMagazine _tourniquet;
