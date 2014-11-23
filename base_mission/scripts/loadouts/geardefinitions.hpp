@@ -1,13 +1,13 @@
 // Optics
-//_elcan = "optic_elcan3d";
-_elcan = "optic_elcan";
+_elcan = "optic_elcan3d";
+//_elcan = "optic_elcan";
 _handle = "optic_carryhandle";
 _rangefinder = "Rangefinder";
 _laserdes = "Laserdesignator";
 _laserbatt = "Laserbatteries";
 _bino = "Binocular";
-//_irlaser = "RH_peq2";
-_irlaser = "acc_pointer_IR";
+_irlaser = "RH_peq2";
+//_irlaser = "acc_pointer_IR";
 _flashlight = "RH_SFM952V";
 _eotech = "RH_eotech553";
 _nvg = "NVGoggles";
@@ -174,7 +174,5 @@ _bp_radio = "tf_rt1523g";
 _gps = "ItemGPS";
 _android = "ItemAndroid";
 _uav = "B_UavTerminal";
-_mcc = "MCC_Console";
 _ctab = "ItemcTab";
-_sparebarrel = "AGM_SpareBarrel";
 _kestrel = "cse_weather_meter";
