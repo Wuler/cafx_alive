@@ -231,6 +231,26 @@ switch toupper(typeof _this) do {
                 _this addmagazine _smoke_green;
                 _this addmagazine _smoke_red;
         };
+        case "ONS_CSOG_OPERATOR_V2":
+        {
+                _this adduniform _uniform_sf;
+                _this addheadgear _helmet_lite;
+                _this addvest _vest_sf;
+                _this addgoggles _goggles;
+                _this addweapon _bino;
+
+                _this addweapon _carbine_iur;
+                _this addweapon _lat;
+
+                {_this addmagazine _rifle_mag} foreach [1,2,3,4,5,6];
+                _this addmagazine _rifle_mag_tr;
+                _this additem _c8_sup;
+                _this additem _boonie_hs;
+                {_this addmagazine _grenade} foreach [1,2];
+                {_this addmagazine _smoke} foreach [1,2];
+                _this addmagazine _smoke_green;
+                _this addmagazine _smoke_red;
+        };
         case "ONS_CSOG_MEDIC":
         {
                 _this adduniform _uniform_sf;
