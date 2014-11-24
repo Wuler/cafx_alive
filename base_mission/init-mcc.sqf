@@ -10,8 +10,6 @@ mccPresetsObjects = [
 					,['Medical Vehicle (CMS)', '_this setvariable ["cse_medical_vehicle", true, true];']
 					,['Vehicle loadout', '_this execvm "scripts\loadoutfull.sqf";']
 					,['Satellite Comms','_this addAction ["SatCOM", {call compile preprocessfilelinenumbers "support\modules\pxs_satcom_oa\start_satellite.sqf"}];']
-					,['Defuse Bomb 90s - change code and timer','CODE = [1,2,3,4,5,6]; [_this, 90] spawn COB_fnc_bombTimer; _this allowdamage false; _this addAction ["DEFUSE","scripts\DEFUSE\defuseAction.sqf","",1,true,true,"","(_target distance _this) < 3"];']
-					,['Contains bomb code - change The Code','_this addAction [("<t color=""#E61616"">" + ("The Code") + "</t>"),"scripts\DEFUSE\searchAction.sqf","",1,true,true,"","(_target distance _this) < 3";']
 					,['Destroyable by satchels only', '_this addEventHandler ["handledamage", {if ((_this select 4) in ["SatchelCharge_Remote_Ammo","DemoCharge_Remote_Ammo"]) then {(_this select 0) setdamage 1;(_this select 3) addRating 1500} else {0}}];']
 					,['', '']
 					,['======= Effects =======','']
@@ -22,10 +20,9 @@ mccPresetsObjects = [
 					,['', '']
 					,['======= Misc =======','']
 					,['Create Local Marker', '_this execVM "'+MCC_path+'mcc\general_scripts\create_local_marker.sqf";']
-					];
+			];
 
 if (isserver) then {
-	//[] spawn {
 		private ["_mccobjects"];
 		_mccobjects = [];
 		//waituntil {sleep 0.5; MCC_initDone};
@@ -70,5 +67,4 @@ if (isserver) then {
 
 			} forEach _mccobjects;
 		};
-	//s};
 };
