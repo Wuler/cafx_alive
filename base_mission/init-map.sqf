@@ -29,7 +29,7 @@ private "_tpvar";
 			// vehicle service
 			if (_x find "service" > -1) exitWith {
 				private "_service";
-				_service = "USMC_WarfareBVehicleServicePoint" createvehicle getmarkerpos _x;
+				_service = "CamoNet_BLUFOR_big_F" createvehicle getmarkerpos _x;
 				_service setdir (markerDir _x);
 			};
 
