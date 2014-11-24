@@ -32,7 +32,7 @@ _menus =
 	]
 ];
 
-_heloservice = ["Heli_H","Land_HelipadSquare_F","Land_HelipadCircle_F"];
+_heloservice = ["Heli_H","HeliH","Land_HelipadCircle_F","Land_HelipadCivil_F","Land_HelipadEmpty_F","Land_HelipadRescue_F","Land_HelipadSquare_F"];
 _vehservice = ["USMC_WarfareBVehicleServicePoint","US_WarfareBVehicleServicePoint_EP1","US_WarfareBVehicleServicePoint_Base_EP1"];
 _loadoutservice = _heloservice + _vehservice + [];
 
