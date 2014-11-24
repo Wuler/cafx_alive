@@ -1,13 +1,12 @@
-class CfgUnitInsignia
-{
-	class CMBG
-	{
+class CfgUnitInsignia {
+	class CMBG {
 		displayName = "7th Canadian Mechanized Brigade Group";
 		author = "7CMBG"; // Author displayed in Arsenal
 		texture = "pics\logo.paa"; // Image path
 		textureVehicle = ""; // Does nothing currently, reserved for future use
 	};
 };
+
 class Params {
 	class ins_settings { //0
 		title = ":: Insurgency Settings";
@@ -342,7 +341,7 @@ class Extended_Init_Eventhandlers {
     	};
     	
 //vehicles
-	//ambulances
+	//ambulance loadout
 	class B_Truck_01_medical_F {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
     	};
@@ -355,8 +354,14 @@ class Extended_Init_Eventhandlers {
 	class B_MRAP_01_F {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
     	};
+	class M1133_MEV_DG1_NOSLAT {
+		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
+    	};
+	class M1133_MEV_DG1_SLAT {
+		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
+    	};
     	
-    	//loadouts
+    	//basic loadout
 	class cafx_lav3_isc_base_F {
 		lav3_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
     	};
