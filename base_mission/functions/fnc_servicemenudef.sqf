@@ -33,7 +33,7 @@ _menus =
 ];
 
 _heloservice = ["Heli_H","HeliH","Land_HelipadCircle_F","Land_HelipadCivil_F","Land_HelipadEmpty_F","Land_HelipadRescue_F","Land_HelipadSquare_F"];
-_vehservice = ["USMC_WarfareBVehicleServicePoint","US_WarfareBVehicleServicePoint_EP1","US_WarfareBVehicleServicePoint_Base_EP1"];
+_vehservice = ["CamoNet_BLUFOR_big_F","USMC_WarfareBVehicleServicePoint","US_WarfareBVehicleServicePoint_EP1","US_WarfareBVehicleServicePoint_Base_EP1"];
 _loadoutservice = _heloservice + _vehservice + [];
 _wetsuits = ["U_B_Wetsuit","U_I_Wetsuit","U_O_Wetsuit"];
 
