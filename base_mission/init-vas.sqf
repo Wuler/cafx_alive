@@ -301,58 +301,15 @@ if ((paramsarray select 3) == 0) then {vas_weapons = [];vas_magazines = [];vas_i
 
 	vas_glasses =
 	[
-	    //goggles
-	    "G_Aviator",
-	    "G_Combat",
-	    "G_Lowprofile",
-	    "G_Diving",
-
-	    //masks
-		"Mask_M40",
-		"Mask_M40_OD",
-		"Mask_M50",
-		"Balaclava_Black",
-		"Balaclava_GRY",
-		"Balaclava_OD",
-		"L_shemagh_white",
-		"L_Shemagh_OD",
-		"L_Shemagh_Tan",
-		"L_Shemagh_Red",
-		"L_Shemagh_Gry",
-		"LCG_Shemagh_Tan",
-		"LBG_Shemagh_Tan",
-		"LOG_Shemagh_Tan",
-		"LCG_Shemagh_OD",
-		"LBG_Shemagh_OD",
-		"LOD_Shemagh_OD",
-		"LCG_Shemagh_White",
-		"LOG_Shemagh_White",
-		"LBG_Shemagh_White",
-		"LOG_Shemagh_Gry",
-		"LCG_Shemagh_Gry",
-		"LBG_Shemagh_Gry",
-		"NeckTight_Gry",
-		"NeckTight",
-		"NeckTight_Red",
-		"NeckTight_Tan",
-		"PU_shemagh_White",
-		"PU_shemagh_OD",
-		"PU_shemagh_Tan",
-		"SAS_Shemagh_Tan",
-		"SAS_Shemagh_White",
-		"SAS_Shemagh_OD",
-		"Shemagh_Face",
-		"Shemagh_FaceTan",
-		"Shemagh_FaceRed",
-		"Shemagh_FaceGry",
-		"Shemagh_FaceOD",
-		"shemagh_neckD",
-		"shemagh_neckOD",
-		"Tact_HoodTAN",
-		"Tact_HoodMC",
-		"Tact_HoodMAR",
-		"Tact_HoodACU",
-		"Tact_HoodOD"
+	//goggles
+		"G_Aviator",
+		"G_Combat",
+		"G_Lowprofile",
+		"G_Diving",
+		"G_Tactical_Black",
+		"G_Tactical_Clear",
+		"G_Spectacles",
+		"G_Spectacles_Tinted"
 	];
 };
 
