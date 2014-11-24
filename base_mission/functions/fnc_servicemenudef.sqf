@@ -25,8 +25,8 @@ _menus =
 				"",
 				"",
 				"",
-                ["call seven_serviceMenuDef", "sevenservice", 1],
-                -1, 1, true
+                		["call seven_serviceMenuDef", "sevenservice", 1],
+                		-1, 1, true
 			]
 		]
 	]
@@ -35,6 +35,7 @@ _menus =
 _heloservice = ["Heli_H","HeliH","Land_HelipadCircle_F","Land_HelipadCivil_F","Land_HelipadEmpty_F","Land_HelipadRescue_F","Land_HelipadSquare_F"];
 _vehservice = ["USMC_WarfareBVehicleServicePoint","US_WarfareBVehicleServicePoint_EP1","US_WarfareBVehicleServicePoint_Base_EP1"];
 _loadoutservice = _heloservice + _vehservice + [];
+_wetsuits = ["U_B_Wetsuit","U_I_Wetsuit","U_O_Wetsuit"];
 
 if (_menuName == "sevenservice") then {
 	_menus set [count _menus,
@@ -93,9 +94,9 @@ if (_menuName == "sevenservice") then {
 					["Backpack to chest",
 						{0 spawn FSFSV_CallBackpackToFront},
 						"",
+						"frogs only",
 						"",
-						"",
-						-1,1, (call FSFSV_TestPlayerBackpackBack) > 0
+						-1, uniform player in _wetsuits, (call FSFSV_TestPlayerBackpackBack) > 0
 					],
 					["Backpack to back",
 						{0 spawn FSFSV_CallBackpackToBack},
