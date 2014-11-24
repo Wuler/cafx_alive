@@ -314,9 +314,14 @@ class Params {
 #include "scripts\pxs_satcom_a3\init_interface.hpp"
 
 class Extended_Init_Eventhandlers {
+
+//soldiers init
+	//extra bandage
 	class CAManBase {
 		bandage_init = "(_this select 0) addMagazine ""cse_bandage_basic"";";
     	};
+    	
+    	//medics
 	class B_ons_medic_TW_F {
 		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
 	};
@@ -329,18 +334,15 @@ class Extended_Init_Eventhandlers {
 	class ONS_CSOG_OPERATOR_V2 {
 		medic_init = "(_this select 0) setvariable [""cse_medicClass"",1,true];";
     	};
-	class MASH_EP1 {
-		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
+    	
+//objects
+    	//hospitals
+	class Land_BagBunker_Large_F {
+		medic_init = "(_this select 0) setvariable [""cse_medical_facility"",1,true];";
     	};
-	class MASH {
-		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    	};
-	class USMC_WarfareBFieldhHospital {
-		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    	};
-	class US_WarfareBFieldhHospital_EP1 {
-		facility_init = "(_this select 0) setvariable [""cse_medical_facility"", true, true];";
-    	};
+    	
+//vehicles
+	//ambulances
 	class B_Truck_01_medical_F {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
     	};
@@ -353,6 +355,8 @@ class Extended_Init_Eventhandlers {
 	class B_MRAP_01_F {
 		amb_init = "_this execvm ""scripts\loadouts\vehloadoutmed.sqf""; (_this select 0) setvariable [""cse_medicalVehicle_CMS"", _setting, true];";
     	};
+    	
+    	//loadouts
 	class cafx_lav3_isc_base_F {
 		lav3_init = "_this execvm ""scripts\loadouts\vehloadoutfull.sqf"";";
     	};
