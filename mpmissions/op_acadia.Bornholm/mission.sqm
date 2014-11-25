@@ -6708,19 +6708,19 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={12015.941,59.986523,13110.827};
+			position[]={11974.24,67.452232,12992.913};
 			name="service";
 			text="Vehicle service";
 			type="b_maint";
 			colorName="ColorBlue";
 			a=0.5;
 			b=0.5;
-			angle=-89.152847;
+			angle=-135.25389;
 		};
 		class Item2
 		{
 			position[]={12016.9,62.394588,13041};
-			name="7th Canadian Mechanized Brigade";
+			name="respawn_west";
 			text="7th Canadian Mechanized Brigade";
 			type="flag_Canada";
 		};
