@@ -33,7 +33,7 @@ _menus =
 ];
 
 _heloservice = ["Heli_H","HeliH","Land_HelipadCircle_F","Land_HelipadCivil_F","Land_HelipadEmpty_F","Land_HelipadRescue_F","Land_HelipadSquare_F"];
-_vehservice = ["CamoNet_BLUFOR_big_F","USMC_WarfareBVehicleServicePoint","US_WarfareBVehicleServicePoint_EP1","US_WarfareBVehicleServicePoint_Base_EP1"];
+_vehservice = ["CamoNet_BLUFOR_big_F"];
 _loadoutservice = _heloservice + _vehservice + [];
 _wetsuits = ["U_B_Wetsuit","U_I_Wetsuit","U_O_Wetsuit"];
 
@@ -47,35 +47,35 @@ if (_menuName == "sevenservice") then {
 						"",
 						"Move close to service point and shutdown engine to service vehicle",
 						"",
-						-1, !isEngineOn (vehicle player) && count ([player, _vehservice, 15] call CBA_fnc_getNearest) > 0, vehicle player isKindOf "Car"
+						-1, !isEngineOn (vehicle player) && count (nearestObjects [player, _vehservice, 15]) > 0, vehicle player isKindOf "Car"
 					],
 					["Helicopter Service",
 						{[] execvm "scripts\rearmchopper.sqf"},
 						"",
 						"Move on helipad and shutdown engine to service chopper",
 						"",
-						-1, !isEngineOn (vehicle player) && count ([player, _heloservice, 15] call CBA_fnc_getNearest) > 0, vehicle player isKindOf "Air"
+						-1, !isEngineOn (vehicle player) && count (nearestObjects [player, _heloservice, 15]) > 0, vehicle player isKindOf "Air"
 					],
-					["Load Infantry box",
+					["Load Infantry box near service point",
 						{[1] execvm "scripts\loadouts\vehloadouts.sqf"},
 						"",
 						"Load infantry gear in vehicle",
 						"",
-						-1,1, (vehicle player) != player && count ([player, _loadoutservice, 15] call CBA_fnc_getNearest) > 0
+						-1,count (nearestObjects [player, _loadoutservice, 15]) > 0, (vehicle player) != player
 					],
-					["Load Weapons box",
+					["Load Weapons box near service point",
 						{[2] execvm "scripts\loadouts\vehloadouts.sqf"},
 						"",
 						"Load heavy weapons in vehicle",
 						"",
-						-1,1, (vehicle player) != player && count ([player, _loadoutservice, 15] call CBA_fnc_getNearest) > 0
+						-1,count (nearestObjects [player, _loadoutservice, 15]) > 0, (vehicle player) != player
 					],
 					["Load Medical box",
 						{[3] execvm "scripts\loadouts\vehloadouts.sqf"},
 						"",
-						"Load medical gear in vehicle",
+						"Load medical gear near service point",
 						"",
-						-1,1, (vehicle player) != player && count ([player, _loadoutservice, 15] call CBA_fnc_getNearest) > 0
+						-1,count (nearestObjects [player, _loadoutservice, 15]) > 0, (vehicle player) != player
 					],
 					["RTB",
 						{player setpos getmarkerpos "respawn_west"},
