@@ -80,6 +80,7 @@ class Mission
 		"mcc_sandbox",
 		"cse_sys_misc",
 		"ons_csog",
+		"cse_sys_weaponrest",
 		"a3_map_stratis"
 	};
 	randomSeed=10281044;
@@ -103,7 +104,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=57;
+		items=58;
 		class Item0
 		{
 			side="LOGIC";
@@ -2573,7 +2574,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7259.5581,0.013178914,5638.8999};
+					position[]={7353.3721,0.14884958,6893.666};
 					azimut=-0.52340686;
 					class args
 					{
@@ -2662,7 +2663,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7168.0132,0.019672358,5552.3999};
+					position[]={7261.8271,0.21263108,6807.166};
 					azimut=-0.52340698;
 					id=125;
 					side="LOGIC";
@@ -2681,7 +2682,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7167.8511,0.019037358,5461.231};
+					position[]={7261.665,-0.1135494,6715.9971};
 					azimut=-0.52340698;
 					id=126;
 					side="LOGIC";
@@ -2700,7 +2701,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7265.9507,0.012039629,5462.1284};
+					position[]={7359.7646,0.019764215,6716.8945};
 					azimut=-0.52340686;
 					class args
 					{
@@ -2753,7 +2754,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7269.1421,0.015969509,5373.063};
+					position[]={7362.9561,-0.02220674,6627.8291};
 					azimut=-0.52340698;
 					class args
 					{
@@ -2800,7 +2801,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7170.6909,0.01844654,5283.1685};
+					position[]={7264.5049,0.2501556,6537.9346};
 					azimut=-0.52340686;
 					id=129;
 					side="LOGIC";
@@ -2819,7 +2820,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7269.4995,-0.019351492,5282.606};
+					position[]={7363.3135,-0.075857043,6537.3721};
 					azimut=-0.52340686;
 					class args
 					{
@@ -2848,7 +2849,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7167.9155,0.028460588,5641.7036};
+					position[]={7261.7295,-0.17822403,6896.4697};
 					azimut=-0.52340686;
 					class args
 					{
@@ -2877,7 +2878,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7170.1558,0.029759584,5371.4116};
+					position[]={7263.9697,-0.12334099,6626.1777};
 					azimut=-0.52340698;
 					class args
 					{
@@ -2918,7 +2919,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7259.4604,0.016961988,5730.8667};
+					position[]={7353.2744,-0.25376034,6985.6328};
 					azimut=-0.52340686;
 					class args
 					{
@@ -2947,7 +2948,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7261.5132,0.022132911,5549.5083};
+					position[]={7355.3271,0.0065838769,6804.2744};
 					azimut=-0.52340698;
 					id=134;
 					side="LOGIC";
@@ -2966,7 +2967,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7366.7319,-0.0053895544,5385.9028};
+					position[]={7460.5459,0.069272995,6640.6689};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3026,7 +3027,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7456.1792,-0.013401045,5732.2554};
+					position[]={7549.9932,0.048673421,6987.0215};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3093,7 +3094,7 @@ class Mission
 				class Item0
 				{
 					presenceCondition="(paramsArray select 5) == 1";
-					position[]={7463.1011,-0.0020578112,5561.0405};
+					position[]={7556.915,-0.052420411,6815.8066};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3166,7 +3167,7 @@ class Mission
 				class Item0
 				{
 					presenceCondition="(paramsArray select 5) == 1";
-					position[]={7362.3901,-0.027412282,5560.1206};
+					position[]={7456.2041,-0.0051803514,6814.8867};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3245,7 +3246,7 @@ class Mission
 				class Item0
 				{
 					presenceCondition="(paramsArray select 16) == 1 and (paramsArray select 25) < 7";
-					position[]={7461.019,-0.018603126,5476.7007};
+					position[]={7554.833,0.0052974224,6731.4668};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3360,7 +3361,7 @@ class Mission
 				class Item0
 				{
 					presenceCondition="(paramsArray select 16) == 1 and (paramsArray select 26) < 7";
-					position[]={7364.3022,-0.0017639566,5471.5669};
+					position[]={7458.1162,-0.0077551231,6726.333};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3474,7 +3475,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7459.855,-0.00017656572,5641.4751};
+					position[]={7553.6689,-0.011976659,6896.2412};
 					azimut=-0.52340686;
 					class args
 					{
@@ -3527,7 +3528,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7363.3901,-0.022743439,5729.7163};
+					position[]={7457.2041,-0.1207225,6984.4824};
 					azimut=-0.52340698;
 					class args
 					{
@@ -3604,7 +3605,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7367.0112,0.043193918,5645.7222};
+					position[]={7460.8252,0.097640067,6900.4883};
 					azimut=0.0095387697;
 					class args
 					{
@@ -3753,7 +3754,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7369.9644,-0.035079189,5282.062};
+					position[]={7463.7783,-0.09577547,6536.8281};
 					azimut=-0.52340698;
 					class args
 					{
@@ -3884,7 +3885,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7470.353,-0.036348969,5282.1929};
+					position[]={7564.167,-0.024796024,6536.959};
 					azimut=-0.52340698;
 					class args
 					{
@@ -3931,7 +3932,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7466.1885,-0.0038180044,5382.4272};
+					position[]={7560.0024,0.075940587,6637.1934};
 					azimut=-0.52340698;
 					class args
 					{
@@ -4002,7 +4003,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7169.4507,0,5731.2974};
+					position[]={7263.2646,0.011243351,6986.0635};
 					azimut=-0.52340698;
 					class args
 					{
@@ -4511,6 +4512,25 @@ class Mission
 					skill=0.60000002;
 					text="p12";
 					description="[CH147] FE- Gunner";
+				};
+			};
+		};
+		class Item57
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7264.4395,0.09066157,7112.5527};
+					azimut=-0.52340698;
+					id=182;
+					side="LOGIC";
+					vehicle="cse_sys_weaponrest";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
