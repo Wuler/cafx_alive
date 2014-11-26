@@ -24,6 +24,52 @@ mccPresetsObjects = [
 					,['Create Local Marker', '_this execVM "'+MCC_path+'mcc\general_scripts\create_local_marker.sqf";']
 					];
 
+Ares_EditableObjectBlacklist = Ares_EditableObjectBlacklist + [
+	"ALiVE_sys_GC",
+	"ALiVE_sys_adminactions",
+	"ALiVE_SYS_spotrep",
+	"ALiVE_sys_newsfeed",
+	"ALiVE_SYS_marker",
+	"ALiVE_SYS_LOGISTICS",
+	"ALiVE_SYS_sitrep",
+	"ALiVE_SYS_patrolrep",
+	"SideOPFOR_F",
+	"SideResistance_F",
+	"ALiVE_mil_placement",
+	"ALiVE_mil_OPCOM",
+	"ALiVE_mil_logistics",
+	"ALiVE_civ_placement",
+	"cse_sys_weaponrest",
+	"cse_damage_ai",
+	"cse_sys_gestures",
+	"ALiVE_SYS_LOGISTICSDISABLE",
+	"ALiVE_sys_profile",
+	"cse_sys_winddeflection",
+	"cse_sys_medical",
+	"ALiVE_MIL_C2ISTAR",
+	"ALiVE_SUP_PLAYER_RESUPPLY",
+	"cse_sys_attachableItems",
+	"cse_sys_logistics",
+	"ALiVE_amb_civ_placement",
+	"ALiVE_amb_civ_population",
+	"cse_sys_magazineRepack",
+	"cse_sys_advanced_interaction",
+	"ALiVE_mil_cqb",
+	"cse_sys_groups",
+	"cse_sys_backblast",
+	"mcc_sandbox_moduleGAIASettings",
+	"ALiVE_require",
+	"cse_sys_tags",
+	"cse_sys_nightvision",
+	"mcc_sandbox_moduleMissionSettings",
+	"mcc_sandbox_moduleCover",
+	"Logic",
+	"ModuleCurator_F"
+];
+
+//ARES hack to save full map (radius 50m)
+Ares_fnc_objectsgrabber = compile preprocessFileLineNumbers "functions\fn_objectsgrabber.sqf";
+
 if (isserver) then {
 	//[] spawn {
 		private ["_mccobjects","_aresobjects"];
