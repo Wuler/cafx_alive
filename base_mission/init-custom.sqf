@@ -112,22 +112,3 @@ if(!isDedicated) then {
 		};"
 	];
 };
-
-
-/*
-if (isserver) exitwith {
-	private ["_mishnames","_mishfiles","_smish"]
-
-	_mishnames = profileNamespace getVariable "MCC_save";
-	_mishfiles = profileNamespace getVariable "MCC_saveFiles";
-	_smish = [_mishnames,_mishfiles];
-	missionnamespace setvariable ["smish",_smish];
-
-	"smish" addPublicVariableEventHandler {
-		private["_mish"];
-		_mish = _this select 1;
-		profileNamespace setVariable ["MCC_save",_mish select 0];
-		profileNamespace setVariable ["MCC_saveFiles",_mish select 1];
-	};
-};
-*/

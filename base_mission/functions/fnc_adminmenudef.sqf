@@ -37,8 +37,8 @@ if (_menuName == "admin") then {
 		[
 			["admin", "Admin Menu", "popup"],
 				[
-					["Reset LHD pattern",
-						{LHAPattern = [];publicVariable "LHAPattern";},
+					["Save objects to server",
+						{[player,"seven_objectsgrabber",false] call BIS_fnc_MP},
 						"",
 						"",
 						"",

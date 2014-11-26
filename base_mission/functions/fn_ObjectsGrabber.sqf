@@ -1,77 +1,17 @@
-/*
-	File: objectGrabber.sqf
-	Author: Joris-Jan van 't Land
+private ["_anchorObject", "_anchorDim", "_objs","_br", "_tab", "_outputText","_mish"];
+_anchorObject = _this;
+_objs = allMissionObjects "All";
 
-	Description:
-	Converts a set of placed objects to an object array for the DynO mapper.
-	Places this information in the debug output for processing.
+{
+	//Exclude non-dynamic objects (world objects)
+	if (getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation") in ["soldier"] || (typeOf _x) in Ares_EditableObjectBlacklist || _x == _anchorObject) then {
+		_objs set [_forEachIndex, -1];
+	};
+} forEach _objs;
 
-	Parameter(s):
-	_this select 0: position of the anchor point (Array)
-	_this select 1: size of the covered area (Scalar)
-	_this select 2: grab object orientation? (Boolean) [default: false]
-
-	Returns:
-	Ouput text (String)
-
-	(Modified for use with Ares by AntonStruyk)
-*/
-
-private ["_anchorObject", "_anchorDim", "_objs", "_grabOrientation"];
-_anchorObject = [_this, 0] call BIS_fnc_Param;
-_anchorDim = [_this, 1, 50, [-1]] call BIS_fnc_Param;
-
-if (_anchorDim == 50) then {
-	_objs = allMissionObjects "All";
-	{
-		//Exclude non-dynamic objects (world objects)
-		if (getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation") in ["soldier"] || (typeOf _x) in Ares_EditableObjectBlacklist || _x == player) then {
-			_objs set [_forEachIndex, -1];
-		};
-	} forEach _objs;
-
-} else {
-	_objs = (position _anchorObject) nearObjects _anchorDim;
-
-	//First filter illegal objects
-	private ["_allDynamic"];
-	_allDynamic = allMissionObjects "All";
-	{
-		//Exclude non-dynamic objects (world objects)
-		private ["_excludeFlag"];
-
-		_excludeFlag = false;
-		if (_x in _allDynamic) then
-		{
-			//Exclude characters
-			private ["_sim"];
-			_sim = getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "simulation");
-
-			if (_sim in ["soldier"]) then
-			{
-				_excludeFlag = true;
-			};
-		}
-		else
-		{
-			_excludeFlag = true;
-		};
-
-		if ((typeOf _x) in Ares_EditableObjectBlacklist || _x == player) then
-		{
-			_excludeFlag = true;
-		};
-
-		if (_excludeFlag) then
-		{
-			_objs set [_forEachIndex, -1];
-		};
-	} forEach _objs;
-};
 _objs = _objs - [-1];
 
 //Formatting for output
-private ["_br", "_tab", "_outputText"];
 _br = toString [13, 10];
 _tab = toString [9];
 
@@ -98,5 +38,8 @@ _objectsToSave = [];
 
 // Add an entry for holding the anchor position and version number. This will be extracted if we want to do a relative paste later.
 _outputText = _outputText + format ["[%1,%2,%3],[1]", (getPosWorld _anchorObject) select 0,  (getPosWorld _anchorObject) select 1, (getPosWorld _anchorObject) select 2] + "]";
-copyToClipboard _outputText;
+
+_mish = format ["ares_%1",worldname];
+profilenamespace setvariable [_mish,_outputtext];
+
 _outputText
